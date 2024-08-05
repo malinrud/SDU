@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read the file ‘auto.csv’, df is dataframe
-df = pd.read_csv('auto.csv')
+df = pd.read_csv('Exercise0/auto.csv')
 print(df)
 
 #Remove all rows with ‘mpg’ lower than 16.
@@ -18,6 +18,10 @@ print(df4)
 
 print(df4.dtypes)
 
-# df4['horsepower'] = df4['horsepower'].astype(int)
+df4.loc[:, 'horsepower'] = df4.loc[:, 'horsepower'].astype(int)
+print(df4.dtypes)
 
 #Calculate the averages of every column, except for ‘name’.
+included_coloumns = df4.columns.difference('name')
+averages = df4[included_coloumns].mean()
+print(averages)
