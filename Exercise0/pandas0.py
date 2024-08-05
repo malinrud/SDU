@@ -18,10 +18,13 @@ print(df4)
 
 print(df4.dtypes)
 
-df4.loc[:, 'horsepower'] = df4.loc[:, 'horsepower'].astype(int)
-print(df4.dtypes)
+#df4.loc[:, 'horsepower'] = df4.loc[:, 'horsepower'].astype(int)
+df5 = df4.astype({'horsepower' : 'int64'})
+print(df5)
+print(df5.dtypes)
 
 #Calculate the averages of every column, except for ‘name’.
-included_coloumns = df4.columns.difference('name')
-averages = df4[included_coloumns].mean()
+df6 = df5.drop(columns ='name')
+
+averages = df6.mean()
 print(averages)
