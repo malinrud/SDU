@@ -1,0 +1,24 @@
+1. Regularization:
+    c. What do you observe between L1 and L2 regularization in the second layer? 
+    (Hint: The lambda value used has a big impact on performance.)
+        We need to change the training model. L1 uses the absolute value and L2 the square of coefficients to reduce noise
+        L1 regularization: Typical values for lambda range from 0.001 to 0.1, with larger values resulting in more sparsity in the model. 
+        L2 regularization: Typical values for alpha range from 0.01 to 10, with smaller values 
+        resulting in less regularization and larger values resulting in more regularization.
+
+        L1: Test Accuracy: 91.26%
+
+    d. What is the purpose of adding regularization?
+        Regularization in deep learning is a technique used to prevent overfitting and improve the 
+        generalization of neural networks. It involves adding a regularization term to the loss function,
+        which penalizes large weights or complex model architectures.
+2. Dropout:
+    a. Add a dropout layer between the first and second layer. What do you observe?
+    b. What is the purpose of adding dropout?
+3. Layers:
+    a. Experiment with different amount of layers. What do you observe?
+    b. Experiment with different amount of neurons in each layer. What do you observe?
+4. Momentum:
+    a. Try to add momentum to the SGD optimizer.
+    b. Test different values of momentum. What value do you get the highest accuracy?
+c. What happens if momentum is too high?   
